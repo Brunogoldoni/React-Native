@@ -1,28 +1,13 @@
 import React from "react";
 
-import { View, Text } from "react-native";
+import { Container, Title } from "./styles";
 
-export default function Home() {
+export default function App() {
   return (
     <>
-      <View
-        style={{
-          flex: 1,
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <Text>React Native</Text>
-      </View>
-
-      <View
-        style={{
-          alignItems: "center",
-          marginBottom: 32,
-        }}
-      >
-        <Text>App</Text>
-      </View>
+      <Container>
+        <Title>Welcome, Bruno!</Title>
+      </Container>
     </>
   );
 }
