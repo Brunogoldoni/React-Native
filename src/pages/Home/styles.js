@@ -45,9 +45,23 @@ export const ButtonText = styled.Text`
   font-weight: bold;
 `;
 
-export const MySkillsText = styled.Text`
+export const MySkillsTitle = styled.Text`
   color: ${colors.white};
   font-size: 18px;
   font-weight: bold;
   margin-top: 48px;
+`;
+
+export const ButtonSkills = styled.TouchableOpacity`
+  background-color: ${colors.mediumDark};
+  border-radius: 50px;
+  margin-top: 16px;
+  padding: 16px;
+  align-items: center;
+`;
+
+export const MySkillsText = styled.Text`
+  color: ${colors.white};
+  font-size: 22px;
+  font-weight: bold;
 `;
