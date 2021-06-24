@@ -14,6 +14,13 @@ export const Title = styled.Text`
   font-weight: bold;
 `;
 
+export const GreetingsText = styled.Text`
+  color: ${colors.white};
+  margin-top: 4px;
+  font-size: 12px;
+  font-weight: bold;
+`;
+
 export const WrapperInput = styled.View`
   margin-top: 30px;
 `;
