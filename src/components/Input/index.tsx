@@ -2,9 +2,12 @@ import React, { InputHTMLAttributes } from "react";
 
 import { Container } from "./styles";
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> { }
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+  onChangeText: Function;
+  placeholderTextColor: string;
+}
 
-const Input = ({ ...rest }: InputProps) => {
+const Input = ({ onChangeText, placeholderTextColor, ...rest }: InputProps) => {
   return (
     <Container
       {...rest}
