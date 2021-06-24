@@ -1,18 +1,17 @@
 import React, { useState } from "react";
+import { FlatList } from "react-native";
+
+import { Button, SkillCard, Input } from "../../components";
 
 import {
   Container,
   Title,
   WrapperInput,
-  Input,
   WrapperButton,
-  Button,
-  ButtonText,
   MySkillsTitle,
-  ButtonSkills,
-  MySkillsText,
 } from "./styles";
-export default function App() {
+
+export default function Home() {
   const [newSkill, setNewSkill] = useState("");
   const [mySkills, setMySkills] = useState([]);
 
@@ -34,18 +33,16 @@ export default function App() {
         </WrapperInput>
 
         <WrapperButton>
-          <Button onPress={handleAddNewSkill}>
-            <ButtonText>Add</ButtonText>
-          </Button>
+          <Button title="Add" onPress={handleAddNewSkill} />
         </WrapperButton>
 
         <MySkillsTitle>My Skills: </MySkillsTitle>
 
-        {mySkills.map((skill) => (
-          <ButtonSkills key={skill}>
-            <MySkillsText>{skill}</MySkillsText>
-          </ButtonSkills>
-        ))}
+        <FlatList
+          data={mySkills}
+          keyExtractor={(item) => item}
+          renderItem={({ item }) => <SkillCard skill={item} />}
+        />
       </Container>
     </>
   );

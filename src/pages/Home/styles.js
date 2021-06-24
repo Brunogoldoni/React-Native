@@ -18,50 +18,13 @@ export const WrapperInput = styled.View`
   margin-top: 30px;
 `;
 
-export const Input = styled.TextInput`
-  background-color: ${colors.BGInput};
-  color: ${colors.white};
-  font-size: 18px;
-  width: 100%;
-  padding: 12px;
-  border-radius: 8px;
-`;
-
 export const WrapperButton = styled.View`
   margin-top: 32px;
-`;
-
-export const Button = styled.TouchableOpacity`
-  background-color: ${colors.BGButton};
-  padding: 16px;
-  border-radius: 8px;
-  align-items: center;
-  opacity: 0.7;
-`;
-
-export const ButtonText = styled.Text`
-  color: ${colors.white};
-  font-size: 18px;
-  font-weight: bold;
 `;
 
 export const MySkillsTitle = styled.Text`
   color: ${colors.white};
   font-size: 18px;
   font-weight: bold;
-  margin-top: 48px;
-`;
-
-export const ButtonSkills = styled.TouchableOpacity`
-  background-color: ${colors.mediumDark};
-  border-radius: 50px;
-  margin-top: 16px;
-  padding: 16px;
-  align-items: center;
-`;
-
-export const MySkillsText = styled.Text`
-  color: ${colors.white};
-  font-size: 22px;
-  font-weight: bold;
+  margin: 48px 0 16px 0;
 `;
