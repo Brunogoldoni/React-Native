@@ -14,9 +14,8 @@ export const Title = styled.Text`
   font-weight: bold;
 `;
 
-export const GreetingsText = styled.Text`
+export const GrettingsText = styled.Text`
   color: ${colors.white};
-  margin-top: 4px;
   font-size: 12px;
   font-weight: bold;
 `;
@@ -34,4 +33,18 @@ export const MySkillsTitle = styled.Text`
   font-size: 18px;
   font-weight: bold;
   margin: 48px 0 16px 0;
+`;
+
+export const WrapperItemsList = styled.View`
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+export const WrapperSkillCard = styled.View`
+  flex: 1;
+`;
+
+export const WrapperIcon = styled.View`
+  margin: 12px 0 0 10px;
 `;

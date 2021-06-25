@@ -6,4 +6,6 @@ export const colors = {
   BGButton: "#A370F7",
 
   mediumDark: "#1F1E25",
+
+  phTextColor: "#696969",
 };

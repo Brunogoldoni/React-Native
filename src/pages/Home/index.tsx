@@ -1,15 +1,22 @@
 import React, { useState, useEffect } from "react";
 import { FlatList } from "react-native";
 
+import { colors } from '../../styles/colors';
+
+import Icon from 'react-native-vector-icons/Feather';
+
 import { Button, SkillCard, Input } from "../../components";
 
 import {
   Container,
   Title,
-  GreetingsText,
+  GrettingsText,
   WrapperInput,
   WrapperButton,
   MySkillsTitle,
+  WrapperItemsList,
+  WrapperSkillCard,
+  WrapperIcon
 } from "./styles";
 
 interface SkillData {
@@ -28,7 +35,13 @@ export default function Home() {
       name: newSkill
     }
 
-    setMySkills((oldSkills) => [...oldSkills, data]);
+    setMySkills((oldState) => [...oldState, data]);
+  }
+
+  function handleRemoveSkill(id: string) {
+    setMySkills(oldState => oldState.filter(
+      skill => skill.id !== id
+    ))
   }
 
   useEffect(() => {
@@ -46,14 +59,14 @@ export default function Home() {
   return (
     <>
       <Container>
+        <GrettingsText>{grettings}</GrettingsText>
         <Title>Welcome, Bruno!</Title>
-        <GreetingsText>{grettings}</GreetingsText>
 
         <WrapperInput>
           <Input
             placeholder="New skill"
             onChangeText={setNewSkill}
-            placeholderTextColor="#555"
+            placeholderTextColor={`${colors.phTextColor}`}
           />
         </WrapperInput>
 
@@ -66,7 +79,24 @@ export default function Home() {
         <FlatList
           data={mySkills}
           keyExtractor={(item) => item.id}
-          renderItem={({ item }) => <SkillCard skill={item.name} />}
+          renderItem={({ item }) =>
+            <WrapperItemsList>
+              <WrapperSkillCard>
+                <SkillCard
+                  skill={item.name}
+                />
+              </WrapperSkillCard>
+
+              <WrapperIcon>
+                <Icon
+                  name="x"
+                  size={18}
+                  color={`${colors.white}`}
+                  onPress={() => handleRemoveSkill(item.id)}
+                />
+              </WrapperIcon>
+            </WrapperItemsList>
+          }
         />
       </Container>
     </>
