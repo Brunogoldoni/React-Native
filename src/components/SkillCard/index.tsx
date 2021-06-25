@@ -3,16 +3,18 @@ import { TouchableOpacityProps } from "react-native";
 
 import { ButtonSkills, MySkillsText } from "./styles";
 
-interface SkillCArdProps extends TouchableOpacityProps {
+interface SkillCardProps extends TouchableOpacityProps {
   skill: string;
 }
 
-const SkillCard = ({ skill, ...rest }: SkillCArdProps) => {
+const SkillCard = ({ skill, ...rest }: SkillCardProps) => {
   return (
     <ButtonSkills
       {...rest}
     >
-      <MySkillsText>{skill}</MySkillsText>
+      <MySkillsText>
+        {skill}
+      </MySkillsText>
     </ButtonSkills>
   );
 };
