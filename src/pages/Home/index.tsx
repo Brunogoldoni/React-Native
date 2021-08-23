@@ -79,7 +79,7 @@ export default function Home() {
         <FlatList
           data={mySkills}
           keyExtractor={(item) => item.id}
-          renderItem={({ item }) =>
+          renderItem={({ item }) => (
             <WrapperItemsList>
               <WrapperSkillCard>
                 <SkillCard
@@ -96,7 +96,7 @@ export default function Home() {
                 />
               </WrapperIcon>
             </WrapperItemsList>
-          }
+          )}
         />
       </Container>
     </>

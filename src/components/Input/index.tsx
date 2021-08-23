@@ -9,6 +9,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 const Input = ({ onChangeText, ...rest }: InputProps) => {
   return (
     <Container
+      onChangeText={onChangeText}
       {...rest}
     />
   );
